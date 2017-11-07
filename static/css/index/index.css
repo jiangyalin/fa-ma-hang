@@ -2,9 +2,12 @@ html,body{
     width: 100%;
     height: 100%;
 }
+html{
+    overflow: hidden;
+}
 body{
-      overflow: hidden;
-  }
+    overflow: hidden;
+}
 .g-mn{
     width: 100%;
     height: 100%;
@@ -50,7 +53,7 @@ body{
 .g-mn .m-ban .u-tt{
     position: absolute;
     top: 50%;
-    left: 1.58rem;
+    left: 2rem;
     z-index: 2;
     color: #fff;
     transform: translateY(-50%);

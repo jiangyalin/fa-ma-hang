@@ -38,7 +38,7 @@ gulp.task('htmlmin',function () {
     minifyJS: true,//压缩页面JS
     minifyCSS: true//压缩页面CSS
   };
-  gulp.src(['views/**/*.html','!views/js/**/*.min.html'])
+  gulp.src(['views/**/*.html','!views/**/*.min.html'])
     .pipe(rename({suffix:'.min'}))
     .pipe(htmlmin(options))
     .pipe(gulp.dest('views/**/*.html'));

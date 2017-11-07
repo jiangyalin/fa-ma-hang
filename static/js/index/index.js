@@ -183,6 +183,10 @@ $(function () {
       $(this).prop('src', $(this).attr('data-src'));
     });
     window.setTimeout(function () {
+      $('html').css({
+        'overflow': 'auto',
+        'height': 'auto'
+      });
       $('body').css({
         'overflow': 'auto',
         'height': 'auto'
@@ -200,6 +204,10 @@ $(function () {
     $('.j-loading').fadeIn(300);
     window.setTimeout(function () {
       $('.j-loading').fadeOut(300);
+      $('html').css({
+        'overflow': 'hidden',
+        'height': '100%'
+      });
       $('body').css({
         'overflow': 'hidden',
         'height': '100%'
