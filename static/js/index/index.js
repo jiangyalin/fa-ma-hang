@@ -1,7 +1,7 @@
 $(function () {
 
   var x = 0;
-  var color = ['3e693f', '164a72', '4794c6', 'dbd072'];
+  var color = ['1761e2', '1b52dd', '193fe0', '143dc1'];
   $('body').hammer().bind("swipeleft", function () {
     if (Math.abs(x/50) < 3) {
       x = x - 50;
