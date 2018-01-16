@@ -1,280 +1,67 @@
-<%- include('header.html') %>
-<link rel="stylesheet" href="/css/classify/classify.css" />
-<link rel="stylesheet" href="/css/index/index.css" />
-
-<div class="g-mn j-g-mn-1">
-    <div class="m-hd">
-        <img class="u-img" src="/images/index/title-01.png">
-    </div>
-    <ul class="m-ban">
-        <li class="u-li j-li">
-            <a class="u-a" href="javascript:void(0)">
-                <img class="u-img" src="/images/index/ban-01.png">
-            </a>
-            <div class="u-tt">
-                <a class="u-tt-a" href="javascript:void(0)">公司简介</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if (clientWidth >= 720) {
+                            docEl.style.fontSize = '100px';
+                        } else {
+                            docEl.style.fontSize = 100 * (clientWidth / 720) + 'px';
+                        }
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <title>发码行</title>
+    <link rel="stylesheet" href="./../static/css/public/public.css">
+    <link rel="stylesheet" href="./../static/js/plug-in/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../static/css/public/header.css">
+    <link rel="stylesheet" href="./../static/css/index/index.css">
+    <link rel="stylesheet" href="./../static/css/public/media.css">
+</head>
+<body>
+    <header class="g-hd">
+        <div class="g-hd-tp">
+            <img class="m-logo" src=""/>
+            <nav class="m-nav">
+                <ul class="u-list">
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">首页</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">关于我们</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">发码模式</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">新闻中心</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">产业园</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">FAQ</a>
+                    </li>
+                    <li class="u-li">
+                        <a class="u-a" href="javascript:void(0)">联系我们</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="m-sch">
+                <i class="fa fa-search"></i>
+                <input class="u-it" type="text">
             </div>
-        </li>
-        <li class="u-li j-li">
-            <a class="u-a" href="javascript:void(0)">
-                <img class="u-img" src="/images/index/ban-02.png">
-            </a>
-            <div class="u-tt">
-                <a class="u-tt-a" href="javascript:void(0)">专利科技</a>
-            </div>
-        </li>
-        <li class="u-li j-li">
-            <a class="u-a" href="javascript:void(0)">
-                <img class="u-img" src="/images/index/ban-03.png">
-            </a>
-            <div class="u-tt">
-                <a class="u-tt-a" href="javascript:void(0)">产业码</a>
-            </div>
-        </li>
-        <li class="u-li j-li">
-            <a class="u-a" href="javascript:void(0)">
-                <img class="u-img" id="img-g-mn" src="/images/index/ban-04.png">
-            </a>
-            <div class="u-tt">
-                <a class="u-tt-a" href="javascript:void(0)">FAQ</a>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<section class="g-ban j-ban">
-    <ul class="u-list j-list">
-        <li class="u-li j-li s-li-active" data-x="0">
-            <img class="u-img j-img" src="/images/public/default-01.png" data-src="/images/classify/ban-01.png">
-        </li>
-        <li class="u-li j-li" data-x="50">
-            <img class="u-img j-img" src="/images/public/default-01.png" data-src="/images/classify/ban-02.png">
-        </li>
-        <li class="u-li j-li" data-x="100">
-            <img class="u-img j-img" src="/images/public/default-01.png" data-src="/images/classify/ban-03.png">
-        </li>
-        <li class="u-li j-li" data-x="150">
-            <img class="u-img j-img" id="img-ban" src="/images/public/default-01.png" data-src="/images/classify/ban-04.png">
-        </li>
-    </ul>
-    <ul class="u-text j-text">
-        <li class="u-tt j-ban-tt s-ban-tt-active" data-x="0">
-            <h1 class="u-h1 j-h1">公司简介</h1>
-        </li>
-        <li class="u-tt j-ban-tt" data-x="50">
-            <h1 class="u-h1 j-h1">专利科技</h1>
-        </li>
-        <li class="u-tt j-ban-tt" data-x="100">
-            <h1 class="u-h1 j-h1">产业码</h1>
-        </li>
-        <li class="u-tt j-ban-tt" data-x="150">
-            <h1 class="u-h1 j-h1">FAQ</h1>
-        </li>
-    </ul>
-    <ul class="u-page j-page">
-        <li class="u-pe-li j-li s-pe-active"></li>
-        <li class="u-pe-li j-li"></li>
-        <li class="u-pe-li j-li"></li>
-        <li class="u-pe-li j-li"></li>
-    </ul>
-    <div class="u-arrow-gp j-arrow-gp">
-        <div class="u-arrow"></div>
-    </div>
-    <div class="u-bg">
-        <span class="u-bg-fl j-bg-fl"></span>
-        <span class="u-bg-fr j-bg-fr"></span>
-    </div>
-</section>
-
-<div class="g-mn-2">
-    <ul class="g-mn-gp j-mn-gp">
-        <li class="m-mn-box s-zrf j-mn-box" data-stare="true">
-            <section class="m-tt">
-                <h2 class="u-h2">发码行</h2>
-            </section>
-
-            <p class="m-text-o">码链产融一体化解决方案提供商</p>
-
-            <section class="m-text">
-                <div class="u-ca">
-                    <p class="u-p">发码行是全球率先致力于二维码“扫一扫”码链应用技术的专业机构。</p>
-                    <p class="u-p">拥有不限于中国、美国、日本、台湾等六个国家或地区的二维码“扫一扫”发明专利。</p>
-                    <p class="u-p">通过授权“扫一扫”专利和提供链云数据平台，帮企业进行消费大数据追踪管理，挖掘更大商业价值和实施一体化方案。实现：</p>
-                </div>
-            </section>
-
-            <img class="m-img" src="/images/public/default-01.png" data-src="/images/classify/zrf/img-01.png">
-
-            <section class="m-return-top">
-                <div class="u-bg j-return-top">
-                    <div class="u-arrow"></div>
-                </div>
-            </section>
-        </li>
-        <li class="m-mn-box s-ysg j-mn-box" data-stare="false">
-            <section class="m-tt s-tt-1 j-tt">
-                <h2 class="u-h2">专利</h2>
-            </section>
-
-            <p class="m-text-s">中华人民共和国国家知识产权局</p>
-
-            <img class="m-img s-ysg-img-1" id="img-li-2" src="/images/public/default-01.png" data-src="/images/classify/ysg/img-01.png">
-
-            <p class="m-text-s">中华人民共和国国家知识产权局</p>
-
-            <img class="m-img s-ysg-img-2" src="/images/public/default-01.png" data-src="/images/classify/ysg/img-02.png">
-
-            <section class="m-tt s-tt-1 j-tt">
-                <h2 class="u-h2">码链科技</h2>
-            </section>
-
-            <section class="m-text">
-                <div class="u-ca">
-                    <p class="u-p">“码链”，是指使用智能手机对准“二维码”“扫一扫/点一点”，即可生成新的含有“扫码者DNA”的二维码，同时接入服务而形成的“二维码链条”。</p>
-                </div>
-            </section>
-
-            <img class="m-img s-ysg-img-3" src="/images/public/default-01.png" data-src="/images/classify/ysg/img-03.png">
-            <img class="m-img s-ysg-img-4" src="/images/public/default-01.png" data-src="/images/classify/ysg/img-04.png">
-
-            <section class="m-text-ysg">
-                <p class="u-p">“码链”是“以人为本”的</p>
-                <p class="u-ct">
-                    <span class="u-sn-1">东方传统哲学思想</span>
-                    <span class="u-sn-2">与西方科技有机融合的产物</span>
-                </p>
-            </section>
-
-            <section class="m-text">
-                <div class="u-ca">
-                    <p class="u-p">“码链”是“以人为本”的东方传统哲学思想与西方科技有机融合的产物，它彻底改变了传统互联网的被动经营模式，实现了真正的去中心化，将有效解决目前英特网以IP为底层所固有的安全、传播等方面的种种先天缺陷，将营造一个更有效，更安全的网络世界。</p>
-                    <p class="u-p">消费者只要在线下二维码扫一扫或线上朋友圈转一转，即生成含有自己DNA的二维码，直接进入码链云服务平台完成多功能二维码的接入，成为数字人部落成员，商家通过码链云服务平台便可以实现对“数字人”（消费者）的行为进行全过程追溯、管理。</p>
-                    <p class="u-p">目前码链理论已成为Facebook扎克伯格50项专利的基础引用；也是目前流行的“分享经济”的基础理论。</p>
-                </div>
-            </section>
-
-            <section class="m-return-top">
-                <div class="u-bg j-return-top">
-                    <div class="u-arrow"></div>
-                </div>
-            </section>
-        </li>
-        <li class="m-mn-box s-sym j-mn-box" data-stare="false">
-
-            <section class="m-tt s-tt-1">
-                <h2 class="u-h2">产业码</h2>
-            </section>
-
-            <section class="m-text-sym">
-                <div class="u-mn">
-                    <p class="u-p">除了每年80天的旺季常规销售之外，黄山幸福新世界主题假日酒店创造性地实行会员制。</p>
-                </div>
-            </section>
-
-            <section class="m-tt s-tt-1">
-                <h2 class="u-h2">案例1·幸福码</h2>
-            </section>
-
-            <img class="m-img s-img-1" src="/images/public/default-01.png" data-src="/images/classify/sym/img-01.png">
-
-            <section class="m-text s-text-2">
-                <div class="u-ca">
-                    <p class="u-p">发码行授权黄山幸福新世界集团独家发行幸福码，并为黄山幸福新世界集团搭建以码链为基础、线上线下一体的幸福码平台。</p>
-                    <p class="u-p">幸福码平台上在全球范围内收购或自建主题假日，为酒店导入精心设计的、能满足各年龄阶段、不同群体需求的主题假日和主题活动，并利用码链技术为会员在酒店消费环节创新设计“循环消费”的消费模式，帮助消费者实现消费增值。</p>
-                </div>
-            </section>
-
-            <section class="m-tt-2">
-                <h2 class="u-h2">幸福码平台酒店</h2>
-            </section>
-
-            <img class="m-img s-img-2" src="/images/public/default-01.png" data-src="/images/classify/sym/img-02.png">
-
-            <section class="m-tt s-tt-1">
-                <h2 class="u-h2">案例2·消费码</h2>
-            </section>
-
-            <img class="m-img s-img-3" src="/images/public/default-01.png" data-src="/images/classify/sym/img-03.png">
-
-            <section class="m-text s-text-3">
-                <div class="u-ca">
-                    <p class="u-p">发码行授权消费码发行（中国）有限公司独家发行消费码。并帮助消费码发行（中国）有限公司搭建以码链为基础、线上线下一体的消费码平台。</p>
-                </div>
-            </section>
-
-            <section class="m-return-top">
-                <div class="u-bg j-return-top">
-                    <div class="u-arrow"></div>
-                </div>
-            </section>
-        </li>
-        <li class="m-mn-box s-xmz j-mn-box" data-stare="false">
-
-            <section class="m-tt j-tt">
-                <h2 class="u-h2">FAQ</h2>
-            </section>
-
-            <section class="m-xmz-text">
-                <div class="u-mn">
-                    <div class="u-tt">
-                        <h3 class="u-h3"><span class="u-sn">Q1</span>：</h3>
-                        <h4 class="u-h4">发码行的商业模式是什么?</h4>
-                    </div>
-                    <div class="u-ct">
-                        <h3 class="u-h3"><span class="u-sn">A1</span>：</h3>
-                        <p class="u-p">发码行拥有中国、日本、美国、台湾、香港、澳门等全球“二维码扫一扫”发明专利技术，其商业模式即专利授权，具体如下：</p>
-                        <p class="u-p">1/专利许可费。例如，授权成立台湾发码行、美国发码行，专利独家许可费共计7亿人民币。</p>
-                        <p class="u-p">2/股权持有比例。例如发码行享有台湾发码行、美国发码行20%股权。</p>
-                        <p class="u-p">3/平台升级维护基金。即码链基础平台的使用年费。</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="m-xmz-text">
-                <div class="u-mn">
-                    <div class="u-tt">
-                        <h3 class="u-h3"><span class="u-sn">Q2</span>：</h3>
-                        <h4 class="u-h4">“扫一扫”专利和起源于日本的二维码专利有何不同？</h4>
-                    </div>
-                    <div class="u-ct">
-                        <h3 class="u-h3"><span class="u-sn">A2</span>：</h3>
-                        <p class="u-p">QR二维码数是字信息储存器</p>
-                        <p class="u-p">“扫一扫”专利是一个“扫码→解码→执行”的闭环系统。</p>
-                        <p class="u-p">徐蔚先生的“二维码扫一扫专利”全称“采用条形码图像进行通讯的方法装置和移动端”。该专利保护的是“扫码”这一行为，其对象是包括二维码在内的所有条形码图像。</p>
-                        <p class="u-p">此外，包括QR二维码专利在内，2014年，日本已有大约2万多个和二维码相关的专利。在日本特许厅（专利局）相当严格的审查下，依然没有发现徐蔚先生的专利与现存专利有重合，也正是说明徐蔚先生的“二维码扫一扫专利”与现有的日本QR码等二维码专利是两回事情。</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="m-xmz-text">
-                <div class="u-mn">
-                    <div class="u-tt">
-                        <h3 class="u-h3"><span class="u-sn">Q3</span>：</h3>
-                        <h4 class="u-h4">为何中国人（徐蔚）能够发明“二维码扫一扫”专利，而以苹果、谷歌为代表的美国硅谷无此专利？</h4>
-                    </div>
-                    <div class="u-ct">
-                        <h3 class="u-h3"><span class="u-sn">A3</span>：</h3>
-                        <p class="u-p">徐蔚先生认为：“哲学指导科技发展，哲学高度决定科学深度”。</p>
-                        <p class="u-p">扫一扫专利的发明灵感，源于中国以人为本的道家文化哲学。二维码储存着信息，就相当于一个八卦，人们肉眼无法识别其中的信息，所以需要手机扫码解读，然后根据跳转的页面做出后续执行。扫码即解卦。</p>
-                        <p class="u-p">而美国硅谷大力发展的是人工智能。硅谷为了追求利润最大化，而不断改进技术、更新工具以节省人力资源、生产成本，因此人工智能是资本主义和消费主义发展到更高阶段的产物。硅谷走的是“以机器为本，用机器取代人类”的道路。</p>
-                        <p class="u-p">所以从哲学思维上来说，中国是“二维码扫一扫专利”思想的发源地。</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="m-return-top">
-                <div class="u-bg j-return-top">
-                    <div class="u-arrow"></div>
-                </div>
-            </section>
-        </li>
-    </ul>
-    <div class="m-ldg j-ldg" data-state="false">
-        <div class="u-bounce"></div>
-        <div class="u-bounce"></div>
-        <div class="u-bounce"></div>
-    </div>
-</div>
-
-<script src="/js/index/index.js"></script>
-<%- include('footer.html') %>
+        </div>
+    </header>
+</body>
+</html>

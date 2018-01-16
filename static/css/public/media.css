@@ -1,0 +1,10 @@
+/*响应边界值*/
+@media (min-width: 720px){
+
+}
+
+@media (max-width: 720px){
+    .g-hd{
+        /*height: 6.9rem;*/
+    }
+}
